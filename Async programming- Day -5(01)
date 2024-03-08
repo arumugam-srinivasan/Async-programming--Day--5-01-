@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Promise Tasks</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container mt-5">
+		<h1 class="text-center mb-5">Promise Tasks</h1>
+		<div class="row">
+			<div class="col-md-4">
+				<h2>Dog Breeds</h2>
+				<ul id="breeds-list"></ul>
+			</div>
+			<div class="col-md-4">
+				<h2>Dog Images</h2>
+				<img id="dog-image" src="" alt="Dog image" class="img-fluid">
+			</div>
+			<div class="col-md-4">
+				<h2>Random User</h2>
+				<div id="user-card" class="card text-center">
+					<div class="card-body">
+						<h5 id="user-name" class="card-title"></h5>
+						<p id="user-email" class="card-text"></p>
+						<img id="user-image" src="" alt="User image" class="img-fluid rounded-circle mb-3">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="app.js"></script>
+</body>
+</html>
+
+
+body {
+	font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+	color: #333;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+li {
+	margin-bottom: 5px;
+}
+
+.card-text {
+	margin-bottom: 10px;
+}
+
+.img-fluid {
+	max-width: 100%;
+	height: auto;
+}
+
+// Get the necessary elements from the DOM
+const breedsList = document.getElementById('breeds-list');
+const dogImage = document.getElementById('dog-image');
+const userCard = document.getElementById('user-card');
+const userName = document.getElementById('user-name');
+const userEmail = document.getElementById('user-email');
+const userImage = document.getElementById('user-image');
+
+// Define a function to fetch data from an API
+const fetchData = url => {
+	return new Promise((resolve, reject) => {
+		fetch(url)
+			.then(response => {
+				if (response.ok) {
+					return resolve(response.json());
+				} else {
+					return reject(response.statusText);
+				}
+			})
+			.catch(error => {
+				return reject(error);
+			});
+	});
+};
+
+// Define a function to display the dog breeds
+const displayBreeds = breeds => {
+	breedsList.innerHTML = '';
+	breeds.forEach(breed => {
+		const li = document.createElement('li');
+		li.textContent = breed;
+		breedsList.appendChild(li);
+	});
+};
+
+// Define a function to display the dog image
+const displayDogImage = image => {
+	dogImage.src = image;
+};
+
+// Define a function to display the random user
+const displayUser = user => {
+	userName.textContent =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
